@@ -8,6 +8,7 @@ import { PatientComponent } from './patient/patient.component';
 import { PatientListComponent } from './patient/patient-list/patient-list.component';
 import { PatientDetailsComponent } from './patient/patient-details/patient-details.component';
 import { PatientInfoComponent } from './patient/patient-details/patient-info/patient-info.component';
+import { MedicalHistoryComponent } from './patient/patient-details/medical-history/medical-history.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PatientInfoComponent } from './patient/patient-details/patient-info/pat
     PatientListComponent,
     PatientDetailsComponent,
     PatientInfoComponent,
+    MedicalHistoryComponent,
   ],
   imports: [
     BrowserModule,
