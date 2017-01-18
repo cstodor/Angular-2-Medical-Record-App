@@ -1,3 +1,17 @@
-<p>
-  patient-info works!
-</p>
+<h3>Patient Info</h3>
+<div class="row" *ngIf="_patient">
+  <div class="col-sm-5 field-names">
+    <div><strong>MRN</strong></div>
+    <div><strong>Name</strong></div>
+    <div><strong>DOB</strong></div>
+    <div><strong>Schedule Time</strong></div>
+    <div><strong>Gender</strong></div>
+  </div>
+  <div class="col-sm-7 field-notes">
+    <div>{{ patient.mrn }}</div>
+    <div>{{ patient.name }}</div>
+    <div>{{ patient.dob }}</div>
+    <div>{{ patient.schedule }}</div>
+    <div>{{ patient.gender }}</div>
+  </div>
+</div>
