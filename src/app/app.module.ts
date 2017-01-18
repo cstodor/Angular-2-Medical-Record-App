@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { PatientService } from './patient/patient.service';
+
 import { AppComponent } from './app.component';
 import { PatientComponent } from './patient/patient.component';
 import { PatientListComponent } from './patient/patient-list/patient-list.component';
@@ -26,7 +28,7 @@ import { ControlsComponent } from './patient/patient-details/controls/controls.c
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PatientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
