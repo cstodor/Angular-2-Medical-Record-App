@@ -12,4 +12,7 @@ export class ControlsComponent implements OnInit {
   ngOnInit() {
   }
 
+  savePatientInfo() {
+    console.log("Patient Info Saved!");
+  }
 }
