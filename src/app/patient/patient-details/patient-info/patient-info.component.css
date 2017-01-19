@@ -1,0 +1,25 @@
+.field-names {
+    padding-right: 0;
+}
+.field-notes {
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+.field-names > div,
+.field-notes > div {
+    border: 1px solid #333;
+    border-bottom-width: 0px;
+    padding: 0.1rem 0.5rem;
+    min-height: 1.8rem;
+}
+.field-names > div {
+    border-right: 0px;
+}
+.field-names > div:first-child,
+.field-notes > div:first-child {
+    background: #fafafa;
+}
+.field-names > div:last-child,
+.field-notes > div:last-child {
+    border-bottom-width: 1px;
+}
