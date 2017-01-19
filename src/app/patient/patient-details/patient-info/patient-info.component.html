@@ -13,8 +13,7 @@
     <div><strong>Note</strong></div>
     <div>{{ _patient.mrn }}</div>
     <div><input type="text" [value]="_patient.name"></div>
-    <div>{{ _patient.dob }}</div>
-    <div>{{ _patient.schedule }}</div>
-    <div>{{ _patient.gender }}</div>
+    <div><input [(ngModel)]="_patient.dob" ng2-datetime-picker date-only="true" /></div>
+    <div><input [(ngModel)]="_patient.schedule" ng2-datetime-picker date-format="MM-DD-YYYY" /></div>
   </div>
 </div>
