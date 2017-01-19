@@ -12,6 +12,7 @@ import { PatientDetailsComponent } from './patient/patient-details/patient-detai
 import { PatientInfoComponent } from './patient/patient-details/patient-info/patient-info.component';
 import { MedicalHistoryComponent } from './patient/patient-details/medical-history/medical-history.component';
 import { ControlsComponent } from './patient/patient-details/controls/controls.component';
+import { WelcomeComponent } from './patient/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ControlsComponent } from './patient/patient-details/controls/controls.c
     PatientDetailsComponent,
     PatientInfoComponent,
     MedicalHistoryComponent,
-    ControlsComponent
+    ControlsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
