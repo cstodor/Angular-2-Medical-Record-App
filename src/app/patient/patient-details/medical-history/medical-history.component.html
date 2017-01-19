@@ -1,21 +1,22 @@
 <h3>Medical History</h3>
 <hr/>
 <div class="row text-center history-header">
-  <div class="col-sm-2 offset-md-6">No Problem</div>
+  <div class="col-sm-2 offset-sm-6">No Problem</div>
   <div class="col-sm-2">Medical Problem</div>
   <div class="col-sm-2">Surgery</div>
 </div>
-<div class="row history-container">
-  <div class="col-sm-1">1</div>
-  <div class="col-sm-5">Name of Condition... bla, bla bla</div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
-</div>
-<div class="row history-container">
-  <div class="col-sm-1">2</div>
-  <div class="col-sm-5">Name of Condition... bla, bla bla</div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
-  <div class="col-sm-2 text-center"><input type="checkbox" /></div>
+<div class="history-container" *ngFor="let pat of _patients | slice:(patiendIndex-1):patiendIndex; let i = index;">
+  <div class="row medical-condition" *ngFor="let con of pat.mhistory; let mi = index;">
+    <div class="col-sm-1">{{ mi+1 }}</div>
+    <div class="col-sm-5">{{ con }}</div>
+    <div class="col-sm-2 text-center ">
+      <input type="checkbox" />
+    </div>
+    <div class="col-sm-2 text-center ">
+      <input type="checkbox" />
+    </div>
+    <div class="col-sm-2 text-center ">
+      <input type="checkbox" />
+    </div>
+  </div>
 </div>
