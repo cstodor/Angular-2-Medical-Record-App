@@ -22,4 +22,12 @@ export class PatientListComponent implements OnInit {
       error => this.errorMessage = <any>error);
   }
 
+  selectPatient(elem: any) {
+      var actives = document.querySelectorAll('li.active');
+      [].forEach.call(actives, function(el) {
+        el.classList.remove("active");
+      })
+      elem.classList.toggle('active');
+  }
+
 }

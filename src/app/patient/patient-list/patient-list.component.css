@@ -1,0 +1,17 @@
+ul.patients {
+    padding: 0;
+}
+li.patient {
+    list-style: none;
+    padding: 0.3rem 0 0.3rem 1rem;
+    cursor: pointer;
+}
+li.patient:hover,
+li.patient.active {
+    background: #49abff;
+    color: #fff;
+}
+li.patient.active {
+    background: #0275d8;
+    padding: 0.3rem 0 0.3rem 1.25rem;
+}
