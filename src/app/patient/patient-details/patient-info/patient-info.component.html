@@ -9,10 +9,10 @@
     <div>Schedule Time</div>
     <div>Gender</div>
   </div>
-  <div class="col-sm-7 field-notes">
+  <div class="col-sm-7 field-notes" *ngIf="_patient">
     <div><strong>Note</strong></div>
     <div>{{ _patient.mrn }}</div>
-    <div>{{ _patient.name }}</div>
+    <div><input type="text" [value]="_patient.name"></div>
     <div>{{ _patient.dob }}</div>
     <div>{{ _patient.schedule }}</div>
     <div>{{ _patient.gender }}</div>
