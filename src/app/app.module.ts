@@ -16,6 +16,8 @@ import { WelcomeComponent } from './patient/welcome/welcome.component';
 import { AppRoutingModule, appRouting, appRoutingProviders } from './app-routing.module';
 // Service
 import { PatientService } from './patient/patient.service';
+// Datepicker
+import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { PatientService } from './patient/patient.service';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    appRouting
+    appRouting,
+    Ng2DatetimePickerModule
   ],
   providers: [PatientService, appRoutingProviders],
   bootstrap: [AppComponent]
