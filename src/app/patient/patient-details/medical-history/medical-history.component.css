@@ -1,8 +1,8 @@
+.history-container {
+    margin-bottom: 1rem;
+}
 .medical-condition {
     border-bottom: 1px solid #ddd;
     margin: 0;
     padding: 0.5rem;
-}
-.history-container:last-child {
-    margin-bottom: 1rem;
 }

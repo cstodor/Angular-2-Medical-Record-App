@@ -35,7 +35,6 @@ export class MedicalHistoryComponent implements OnInit, OnDestroy {
       (params: any) => {
         let id = +params['id'];
         this.patiendIndex = +params['id'];
-        console.log("PI:" + this.patiendIndex);
         if (id) {
           this._patientService.getPatient(id).subscribe(_patient => {
             this._patient = _patient;

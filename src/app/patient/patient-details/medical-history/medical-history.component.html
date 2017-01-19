@@ -1,22 +1,27 @@
 <h3>Medical History</h3>
 <hr/>
-<div class="row text-center history-header">
-  <div class="col-sm-2 offset-sm-6">No Problem</div>
-  <div class="col-sm-2">Medical Problem</div>
-  <div class="col-sm-2">Surgery</div>
-</div>
-<div class="history-container" *ngFor="let pat of _patients | slice:(patiendIndex-1):patiendIndex; let i = index;">
-  <div class="row medical-condition" *ngFor="let con of pat.mhistory; let mi = index;">
-    <div class="col-sm-1">{{ mi+1 }}</div>
-    <div class="col-sm-5">{{ con }}</div>
-    <div class="col-sm-2 text-center ">
-      <input type="checkbox" />
+<div class="history-container" *ngFor="let pat of _patients | slice:(patiendIndex-1):patiendIndex">
+  <div class="row text-center history-header" *ngIf="pat.mhistory.length > 1">
+    <div class="col-sm-2 offset-sm-6">No Problem</div>
+    <div class="col-sm-2">Medical Problem</div>
+    <div class="col-sm-2">Surgery</div>
+  </div>
+  <div class="medical-condition" *ngFor="let con of pat.mhistory; let i = index;">
+    <div class="row">
+      <div class="col-sm-1">{{ i+1 }}</div>
+      <div class="col-sm-5">{{ con }}</div>
+      <div class="col-sm-2 text-center ">
+        <input type="checkbox" />
+      </div>
+      <div class="col-sm-2 text-center ">
+        <input type="checkbox" />
+      </div>
+      <div class="col-sm-2 text-center ">
+        <input type="checkbox" />
+      </div>
     </div>
-    <div class="col-sm-2 text-center ">
-      <input type="checkbox" />
-    </div>
-    <div class="col-sm-2 text-center ">
-      <input type="checkbox" />
-    </div>
+  </div>
+  <div class="row" *ngIf="pat.mhistory.length < 1">
+    <div class="col-sm-12 text-center">NO MEDICAL HISTORY FOUND!</div>
   </div>
 </div>
