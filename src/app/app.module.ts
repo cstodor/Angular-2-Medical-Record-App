@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { PatientService } from './patient/patient.service';
-
+// Component
 import { AppComponent } from './app.component';
 import { PatientComponent } from './patient/patient.component';
 import { PatientListComponent } from './patient/patient-list/patient-list.component';
@@ -13,6 +12,10 @@ import { PatientInfoComponent } from './patient/patient-details/patient-info/pat
 import { MedicalHistoryComponent } from './patient/patient-details/medical-history/medical-history.component';
 import { ControlsComponent } from './patient/patient-details/controls/controls.component';
 import { WelcomeComponent } from './patient/welcome/welcome.component';
+// Routing
+import { AppRoutingModule, appRouting, appRoutingProviders } from './app-routing.module';
+// Service
+import { PatientService } from './patient/patient.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +31,11 @@ import { WelcomeComponent } from './patient/welcome/welcome.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    appRouting
   ],
-  providers: [PatientService],
+  providers: [PatientService, appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
