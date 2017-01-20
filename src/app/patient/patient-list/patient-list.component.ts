@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+// Service
 import { PatientService } from '../patient.service';
+// Interface
 import { IPatient } from '../../../api/patient';
 
 @Component({
@@ -16,9 +17,10 @@ export class PatientListComponent implements OnInit {
   constructor(private _patientService: PatientService) { }
 
   ngOnInit() {
+    // Get the List of Patients
     this._patientService.getPatients()
       .subscribe(
-      _patients => this._patients = _patients,
+      patients => this._patients = patients,
       error => this.errorMessage = <any>error);
   }
 
