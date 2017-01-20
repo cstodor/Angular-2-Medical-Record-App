@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 // Service
 import { PatientService } from '../../patient.service';
@@ -13,14 +13,12 @@ import { IPatient } from '../../../../api/patient';
 })
 export class PatientInfoComponent implements OnInit, OnDestroy {
 
-  _patients: IPatient[];
   _patient: IPatient;
   private sub: Subscription;
 
   constructor(
     private _patientService: PatientService,
-    private _route: ActivatedRoute,
-    private _router: Router) { }
+    private _route: ActivatedRoute) { }
 
   ngOnInit() {
     // Get Single Patient
@@ -28,8 +26,8 @@ export class PatientInfoComponent implements OnInit, OnDestroy {
       (params: any) => {
         let id = +params['id'];
         if (id) {
-          this._patientService.getPatient(id).subscribe(_patient => {
-            this._patient = _patient;
+          this._patientService.getPatient(id).subscribe(patient => {
+            this._patient = patient;
           });
         }
       }
